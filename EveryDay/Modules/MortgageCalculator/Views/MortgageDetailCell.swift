@@ -24,3 +24,8 @@ struct MortgageDetailCell: View {
         }
     }
 }
+
+#Preview {
+    @State var item: MortgageItem = MortgageItem(periods: 1, amount: 1290, principal: 1000, interest: 290)
+    return MortgageDetailCell(item: $item)
+}
