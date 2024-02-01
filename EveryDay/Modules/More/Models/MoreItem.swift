@@ -11,10 +11,10 @@ import SwiftUI
 enum MoreItem: Identifiable {
     case mortgageCalculator
     
-    var id: String {
+    var id: Int {
         switch self {
         case .mortgageCalculator:
-            return "Mortgage Calculator"
+            return 0
         }
     }
     
