@@ -10,11 +10,14 @@ import SwiftUI
 
 enum MoreItem: Identifiable {
     case mortgageCalculator
+    case liveActivity
     
     var id: Int {
         switch self {
         case .mortgageCalculator:
             return 0
+        case .liveActivity:
+            return 1
         }
     }
     
@@ -22,13 +25,8 @@ enum MoreItem: Identifiable {
         switch self {
         case .mortgageCalculator:
             return "Mortgage Calculator"
-        }
-    }
-    
-    var detailView: some View {
-        switch self {
-        case .mortgageCalculator:
-            return MortgageCalculatorView()
+        case .liveActivity:
+            return "Live Activity"
         }
     }
 }

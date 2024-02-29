@@ -12,6 +12,9 @@ struct EveryDayApp: App {
     var body: some Scene {
         WindowGroup {
             HomeView()
+                .onOpenURL { url in
+                    print("onOpenURL:", url.absoluteString)
+                }
         }
     }
 }

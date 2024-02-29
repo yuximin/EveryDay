@@ -9,13 +9,18 @@ import SwiftUI
 
 struct MoreView: View {
     
-    @State var items: [MoreItem] = [.mortgageCalculator]
+    @State var items: [MoreItem] = [.mortgageCalculator, .liveActivity]
     
     var body: some View {
         NavigationStack {
             List(items) { item in
                 NavigationLink {
-                    item.detailView
+                    switch item {
+                    case .mortgageCalculator:
+                        MortgageCalculatorView()
+                    case .liveActivity:
+                        LiveActivityView()
+                    }
                 } label: {
                     Text(item.title)
                 }
